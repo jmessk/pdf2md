@@ -419,7 +419,6 @@ body:not([data-theme="dark"]) .icon-moon {
 /* Document content styles for rendered Markdown */
 .document-content {
     padding: 2rem;
-    padding-right: 5rem; /* Space for floating buttons */
     background: var(--bg-primary);
     overflow-y: auto;
     height: 100vh;
@@ -429,7 +428,7 @@ body:not([data-theme="dark"]) .icon-moon {
     box-sizing: border-box;
 }
 
-.document-content > *:not(.doc-title) {
+.document-content > * {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -606,16 +605,14 @@ body:not([data-theme="dark"]) .icon-moon {
     
     .document-content {
         padding: 1rem;
-        padding-right: 3.5rem;
-        padding-top: 1rem;
+        padding-top: 3.5rem;
     }
     
     .doc-title {
         font-size: 1.25rem;
-        padding-right: 2rem;
     }
     
-    .document-content > *:not(.doc-title) {
+    .document-content > * {
         max-width: 100%;
     }
 }

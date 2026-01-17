@@ -34,8 +34,7 @@ ENV/
 
 # Project specific
 cache.db
-storage/output/*
-!storage/output/.gitkeep
+storage/
 
 # OS
 .DS_Store
