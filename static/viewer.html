@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF2MD - Document Viewer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="viewer-page">
+    <div id="viewer" class="viewer-container">
+        <!-- Floating action buttons -->
+        <div class="floating-actions">
+            <button id="theme-toggle" class="fab" aria-label="Toggle dark mode">
+                <span class="icon-sun">&#9728;</span>
+                <span class="icon-moon">&#9790;</span>
+            </button>
+            <button id="download-btn" class="fab" aria-label="Download Markdown">
+                <span>&#8595;</span>
+            </button>
+        </div>
+        
+        <!-- Loading state -->
+        <div id="loading" class="loading-container">
+            <div class="spinner"></div>
+            <p>Loading document...</p>
+        </div>
+        
+        <!-- Document content -->
+        <article id="content" class="document-content hidden">
+        </article>
+        
+        <!-- Error state -->
+        <div id="error" class="error-container hidden">
+            <div class="error-icon">&#9888;</div>
+            <h2>Error</h2>
+            <p id="error-message"></p>
+        </div>
+    </div>
+
+    <script src="/static/js/viewer.js"></script>
+</body>
+</html>

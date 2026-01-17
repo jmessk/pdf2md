@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF2MD - PDF to Markdown Converter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF2MD</h1>
+            <p class="subtitle">PDF to Markdown Converter</p>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="icon-sun">&#9728;</span>
+                <span class="icon-moon">&#9790;</span>
+            </button>
+        </header>
+
+        <!-- Upload Screen -->
+        <section id="upload-section" class="section">
+            <div class="upload-area" id="drop-zone">
+                <div class="upload-icon">&#128196;</div>
+                <p>PDFファイルをドラッグ&ドロップ</p>
+                <p class="or">または</p>
+                <label class="file-input-label">
+                    <input type="file" id="file-input" accept=".pdf" hidden>
+                    ファイルを選択
+                </label>
+                <p id="file-name" class="file-name"></p>
+            </div>
+            <button id="convert-btn" class="btn btn-primary" disabled>
+                変換開始
+            </button>
+        </section>
+
+        <!-- Progress Screen -->
+        <section id="progress-section" class="section hidden">
+            <div class="progress-container">
+                <div class="spinner"></div>
+                <p id="progress-message">変換中...</p>
+            </div>
+        </section>
+
+        <!-- Error Screen -->
+        <section id="error-section" class="section hidden">
+            <div class="error-container">
+                <div class="error-icon">&#9888;</div>
+                <h2>エラーが発生しました</h2>
+                <p id="error-message"></p>
+                <button id="retry-btn" class="btn btn-primary">
+                    もう一度試す
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/js/upload.js"></script>
+</body>
+</html>
